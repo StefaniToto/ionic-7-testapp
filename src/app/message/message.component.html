@@ -1,16 +1,251 @@
-<ion-item *ngIf="message" [routerLink]="'/message/' + message.id" [detail]="false">
+<!-- <ion-item
+  *ngIf="message"
+  [routerLink]="'/message/' + message.id"
+  [detail]="false"
+>
   <div slot="start" [class]="!message.read ? 'dot dot-unread' : 'dot'"></div>
   <ion-label class="ion-text-wrap">
     <h2>
       {{ message.fromName }}
       <span class="date">
         <ion-note>{{ message.date }}</ion-note>
-        <ion-icon aria-hidden="true" name="chevron-forward" size="small" *ngIf="isIos()"></ion-icon>
+        <ion-icon
+          aria-hidden="true"
+          name="chevron-forward"
+          size="small"
+          *ngIf="isIos()"
+        ></ion-icon>
       </span>
     </h2>
     <h3>{{ message.subject }}</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
   </ion-label>
+</ion-item> -->
+<!--
+
+
+<ion-grid>
+  <ion-row justify-content-around>
+    <ion-icon name="star" slot="start"></ion-icon>
+    <ion-label> Default Icon </ion-label>
+  </ion-row>
+</ion-grid> -->
+
+<!-- <ion-card>
+  <ion-item>
+    <ion-label> Default Icon </ion-label>
+    <span
+      ><span style="text-decoration: line-through"> 200 €</span>
+      <b>Free</b></span
+    >
   </ion-item>
+</ion-card>
+<ion-item>
+  <ion-label class="ion-text-center"> This transfer is instant </ion-label>
+</ion-item> -->
+<!--
+<ion-card>
+  <ion-card-content>
+    <div style="display: flex; justify-content: center">
+      <div style="background-color: red">
+        <ion-icon
+          name="star"
+          slot="start"
+          style="align-items: center"
+        ></ion-icon>
+        <ion-label> Default Icon ssssssssss </ion-label>
+      </div>
+    </div>
+  </ion-card-content>
+  <hr />
+</ion-card> -->
+
+<!-- <ion-input
+  label="Outline input"
+  label-placement="floating"
+  fill="outline"
+  placeholder="Enter text"
+  labelPlacement="stacked"
+></ion-input> -->
+
+<!-- <ion-range [ticks]="true" [snaps]="false" [max]="1000" [value]="form.value">
+  <ion-label slot="start">10 &euro;</ion-label>
+  <ion-label slot="end">1000 &euro;</ion-label>
+</ion-range> -->
+<!-- <ion-card>
+  <ion-range
+    aria-label="Range with knob events"
+    [(ngModel)]="sliderValue"
+    [ticks]="true"
+    [snaps]="false"
+    [min]="0"
+    [max]="100"
+    [value]="form.value"
+    (ionInput)="setFormValue($event)"
+  ></ion-range
+  ><ion-item>
+    <ion-label range-left slot="start"> {{ moveStart }}</ion-label>
+    <ion-label range-right slot="end"> {{ moveEnd }}</ion-label>
+  </ion-item>
+
+  {{ sliderValue }}
+</ion-card> -->
+
+<!-- <div class="range-container">
+  <pre>current value: {{ currentValue }}</pre>
+  <ion-range
+    (ionInput)="setValue($event)"
+    color="primary"
+    dual-knobs="false"
+    max="100"
+    min="0"
+    pin="false"
+    [value]="currentValue"
+  >
+  </ion-range>
+  <ul class="tick-marks">
+    <li
+      *ngFor="let number of [0, 25, 50, 75, 100]"
+      [class.selected]="number === currentValue"
+    >
+      {{ number }}
+    </li>
+  </ul>
+</div> -->
+
+<!-- <ion-range
+  [min]="10"
+  [max]="100"
+  [(ngModel)]="sliderValue"
+  (ngModelChange)="“setLabel()”"
+  (ionBlur)="“handleChange()”"
+  color="“secondary”"
+></ion-range> -->
+<!-- 
+<ion-textarea
+  aria-label="Custom textarea"
+  placeholder="Type something here"
+  class="custom"
+  helperText="Helper text"
+  [counter]="true"
+  [maxlength]="100"
+  legacy="false"
+></ion-textarea>
+
+<ion-card>
+  <ion-card-content>
+    <ion-item>
+      <ion-textarea
+        [(ngModel)]="formtextarea"
+        class="text-area"
+        label="Add a message (Optional)"
+        label-placement="floating"
+        fill="outline"
+        maxlength="20"
+        (ionFocus)="focusMsg()"
+        (ionBlur)="blurMsg()"
+      >
+        <ion-icon name="arrow-forward"></ion-icon
+      ></ion-textarea>
+      <div *ngIf="form.value < 20; then thenBlock; else elseBlock"></div>
+      <ng-template #thenBlock
+        >Content to render when condition is true.</ng-template
+      >
+      <ng-template #elseBlock
+        >Content to render when condition is false.</ng-template
+      >
+    </ion-item>
+    <ion-item *ngIf="focuschecked"
+      ><ion-label
+        >{{ formtextarea?.length ? formtextarea?.length : 0 }}/{{
+          180 - formtextarea?.length
+        }}
+      </ion-label></ion-item
+    >
+  </ion-card-content>
+  <hr />
+</ion-card> -->
+<!-- 
+<button (click)="click($event)">Click</button>
+
+<div style="text-align: center">
+  <label id="input-sizer" class="input-sizer">
+    <input
+      class="111"
+      [formControl]="form"
+      currencyMask
+      size="6"
+      maxlength="15"
+    />
+  </label>
+</div> -->
+
+<ion-item>
+  <ion-searchbar
+    search-icon="''"
+    type="search"
+    placeholder="Name, email, phone ..."
+  ></ion-searchbar>
+
+  <ion-icon name="logo-ionic"></ion-icon>
+</ion-item>
+
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="12" size-md="6">
+      <ion-item detail="false" lines="none" class="speaker-item">
+        <ion-avatar slot="start" class="ion-text-center">
+          <!-- <img src="/assets/icon/favicon.png" /> -->
+          <ion-label>SM</ion-label>
+        </ion-avatar>
+        <ion-label>
+          <h2>speaker.name</h2>
+          <p>speaker.title</p>
+        </ion-label>
+        <ion-icon
+          slot="end"
+          color="primary"
+          size="small"
+          name="cloud-download"
+        ></ion-icon>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-searchbar
+    #searchInput
+    type="search"
+    class="search-friend"
+    [placeholder]="'Search'"
+    [formControl]="form"
+    (ionFocus)="mouseUp('ionFocus')"
+    (ionBlur)="mouseUp('ionBlur')"
+  ></ion-searchbar>
+</ion-grid>
+<ion-content>
+  <ion-grid
+    style="height: 100%; display: grid"
+    size="12"
+    size-sm="8"
+    offset-sm="2"
+    class="ion-text-center"
+  >
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item detail>
+            <ion-icon name="settings-outline"> </ion-icon>
+            Settings
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-align-self-end">
+      <ion-col
+        ><ion-button> Register Button</ion-button>
+        <ion-button expand="block">Sign Button</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
